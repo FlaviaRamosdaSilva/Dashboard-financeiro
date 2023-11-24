@@ -9,6 +9,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended" //adicionado
     ],
+    "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -16,7 +17,31 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "prettier" //adicionado
+        "prettier", //adicionado
+        "eslint-plugin-import-helpers" //adicionado
     ],
-    "rules": {} //apagado tudo que tinha dentro
+    "rules": { //apagado tudo que tinha dentro
+        "prettier/prettier": "error", //adicionado
+        "no-useless-constructor": "off", //adicionado
+        "@typescript-eslint/no-unused-vars": "off", //adicionado
+        "import-helpers/order-imports": [ //adicionado
+            "warn", //adicionado
+            {
+                "newlinesBetween": "always", //adicionado
+                "groups": [ //adicionado
+                    "/^node:*/", //adicionado
+                    "module", //adicionado
+                    [
+                        "parent", //adicionado
+                        "sibling", //adicionado
+                        "index" //adicionado
+                    ]
+                ],
+                "alphabetize": { //adicionado
+                    "order": "asc", //adicionado
+                    "ignoreCase": true //adicionado
+                }
+            }
+        ]
+    }
 }
