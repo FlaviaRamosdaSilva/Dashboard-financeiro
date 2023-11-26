@@ -1,7 +1,7 @@
 {
   "name": "dashboard-financeiro",
   "version": "1.0.0",
-  "description": "Dashboard",
+  "description": "Dashboard Financeiro API - controle sua vida financeira pessoal de forma rápida e fácil",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./ --fix",
